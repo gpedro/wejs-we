@@ -34,16 +34,22 @@ define(['we','ember'], function (we) {
         })
         .done(function(data) {
           console.warn(data);
-          /*if(data.success){
-            _this.set('messages', data.success);
-            _this.set('requestSend', true);
+          if(data.success){
+              //console.log(data.success[0].message);
+              var messages = [];
+              messages.push({
+                status: 'success',
+                message: data.success[0].message
+              });
+              self.set('messages', messages);
+              self.set('requestSend', true);
           }else{
-            console.warn('requestPasswordChange: Unknow success message');
+              console.warn('requestPasswordChange: Unknow success message');
           }
-          */
+          
         })
         .fail(function(data) {
-          console.debug(data);
+          //console.debug(data);
           
           // handle validation error message;
           if(data.responseJSON.error === 'E_VALIDATION'){
@@ -63,7 +69,8 @@ define(['we','ember'], function (we) {
             self.set('messages', messages);
 
           }else if(data.responseJSON.errors){
-            _this.set('messages', data.responseJSON.errors);
+            console.log(data.responseJSON.errors);
+            self.set('messages', data.responseJSON.errors);
           }else{
             console.error( "Unknow error on request password: ", data );
           }

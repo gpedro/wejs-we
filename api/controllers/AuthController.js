@@ -418,8 +418,8 @@ module.exports = {
 
   changePassword: function(req, res){
 
-    sails.log.warn(req.params);
-    sails.log.info(req.body);
+    //sails.log.warn(req.params);
+    // sails.log.info(req.body);
 
     var oldPassword = req.body.oldPassword;
     var newPassword = req.body.newPassword;
@@ -451,7 +451,7 @@ module.exports = {
       });
     }
 
-    sails.log.info('newPassword:' , newPassword , '| rNewPassword:' , rNewPassword);
+    //sails.log.info('newPassword:' , newPassword , '| rNewPassword:' , rNewPassword);
 
     if( _.isEmpty(newPassword) || _.isEmpty(rNewPassword) ){
       errors.password = [];
@@ -471,7 +471,7 @@ module.exports = {
         rule: 'required',
         message: res.i18n("<strong>New password</strong> and <strong>Confirm new password</strong> are different")
       });
-    }
+    }    
 
     if( ! _.isEmpty(errors) ){
       // error on data or confirm password
@@ -495,11 +495,11 @@ module.exports = {
         sails.log.info('resetPassword: User not found', user);
         return res.negotiate(error);
       }
-
+      
       var passwordOk = user.verifyPassword(oldPassword);
 
       if(passwordOk){
-
+        
         user.newPassword = newPassword;
         user.save();
 
@@ -512,7 +512,21 @@ module.exports = {
           ]
         });
 
-
+      } else {
+        errors.password = [];
+        errors.password.push({
+          type: 'validation',
+          field: 'password',
+          rule: 'required',
+          message: res.i18n("The <strong>current password</strong> is invalid.")
+        });
+        return res.send('400',{
+          "error": "E_VALIDATION",
+          "status": 400,
+          "summary": "Validation errors",
+          "model": "User",
+          "invalidAttributes": errors
+        });
       }
 
     });
