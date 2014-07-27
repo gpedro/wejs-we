@@ -16,12 +16,14 @@ module.exports = function(grunt) {
 		assets: {
 
 			// Assets to watch:
-			files: ['assets/**/*'],
+			files: [
+				'assets/**/*',
+				'!assets/bower_components/**/*'
+			],
 
 			// When assets are changed:
 			tasks: [
 				'syncAssets' ,
-				'emberhandlebars:dev',
 	    	'we_sails_ember_tasks:dev'
     	]
 		}
