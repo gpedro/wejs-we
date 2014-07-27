@@ -113,7 +113,9 @@ module.exports = {
 
     var creatorId = req.user.id;
 
-    req.file('images').upload(function (err, files) {
+    req.file('images').upload({
+      maxBytes: 1000000 // 4M
+    },function (err, files) {
       if (err) return res.serverError(err);
       sails.log.debug('salved files:', files);
       Images.uploadMultiple(files, creatorId, function(err, uploadedFiles){

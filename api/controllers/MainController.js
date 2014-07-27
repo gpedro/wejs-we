@@ -58,13 +58,11 @@ module.exports = {
 
     configs.client.log = sails.config.clientside.log;
 
-    fs.exists('.tmp/config/clientsideEmberjsParts.js', function(exists) {
+    fs.exists('.tmp/config/we-cs-modules.json', function(exists) {
       if (exists) {
-        configs.client.emberjsParts = require('../../.tmp/config/clientsideEmberjsParts.js').clientsideEmberjsParts;
+        var fileJSON = fs.readFileSync('.tmp/config/we-cs-modules.json', 'utf8');
+        configs.client.emberjsParts = JSON.parse(fileJSON);
       }
-      //model export logic disabled
-      //configs.models = HelpersService.getModelsAttributes();
-
       res.send(configs);
     });
   },

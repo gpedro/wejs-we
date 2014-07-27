@@ -20,8 +20,9 @@ module.exports = function(grunt) {
       },
       src: require('../pipeline').jsFilesToInjectOriginal.map(function(src){
         return 'assets/' + src;
-      }),
-      dest: '.tmp/public/concat/production.js'
+      })
+      .concat('assets/templates.hbs.js'),
+      dest: '.tmp/public/concat/app.js'
     }
   });
 

@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     'less:dev',
     'copy:theme_dev',
     'copy:build_for_prod',
-    'emberhandlebars:dev',
+    //'emberhandlebars:dev',
     'we_sails_ember_tasks:prod'
   ]);
 };

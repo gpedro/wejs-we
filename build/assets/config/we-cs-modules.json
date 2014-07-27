@@ -1,0 +1,98 @@
+{
+  "parts": {
+    "adapters": [
+      "application/adapters/sailsAdapter"
+    ],
+    "mixins": [],
+    "controllers": [
+      "application/controllers/ApplicationController",
+      "application/controllers/HomeController",
+      "auth/controllers/AuthChangePasswordController",
+      "auth/controllers/AuthControllerLogin",
+      "auth/controllers/AuthForgotPasswordController",
+      "auth/controllers/AuthRegisterController",
+      "avatar/controllers/AvatarChangeModalController",
+      "avatar/controllers/AvatarImageController",
+      "avatar/controllers/AvatarLinkImageController",
+      "file/controllers/imageCropController",
+      "group/controllers/GroupController",
+      "group/controllers/GroupsCreateController",
+      "group/controllers/GroupsIndexController",
+      "messenger/controllers/MessengerContactController",
+      "messenger/controllers/MessengerContactListController",
+      "messenger/controllers/MessengerMessageController",
+      "notification/controllers/NotificationsIndexController",
+      "notification/controllers/NotificationsItemController",
+      "notification/controllers/NotificationsLidasController",
+      "post/controllers/PostController",
+      "post/controllers/PostShareboxController",
+      "post/controllers/PostsController",
+      "user/controllers/UserController",
+      "user/controllers/UserMenuController"
+    ],
+    "models": [
+      "application/models/ActivityModel",
+      "comment/models/CommentModel",
+      "file/models/ImageModel",
+      "group/models/GroupModel",
+      "notification/models/NotificationModel",
+      "post/models/PostModel",
+      "user/models/ContactModel",
+      "user/models/UserModel"
+    ],
+    "views": [
+      "auth/views/AuthRegisterView",
+      "avatar/views/AvatarChangeModalView",
+      "avatar/views/AvatarView",
+      "messenger/views/MessengereBoxContainerView",
+      "post/views/PostsListView",
+      "post/views/postEditFormView",
+      "user/views/ContactButtomView",
+      "user/views/UserNameView"
+    ],
+    "components": [
+      "application/components/WeConnectionStatusComponent",
+      "application/components/WeSelect2Component",
+      "application/components/WeWysiwygEditorComponent",
+      "auth/components/WeAuthModalLoginComponent",
+      "avatar/components/WeAvatarComponent",
+      "avatar/components/WeAvatarModalComponent",
+      "comment/components/WeCommentFormComponent",
+      "file/components/FileUploadComponent",
+      "file/components/ImageUploadComponent",
+      "file/components/WeImageComponent",
+      "file/components/WeImageCropComponent",
+      "file/components/WeImagePreviewComponent",
+      "file/components/WeVideoComponent",
+      "file/components/WeVideoPreviewComponent",
+      "messenger/components/WeMessengerBoxComponent",
+      "messenger/components/WeMessengerComponent",
+      "messenger/components/WeMessengerPublicBoxComponent"
+    ],
+    "routes": [
+      "application/routes/ApplicationRoute",
+      "application/routes/HomeRoute",
+      "application/routes/UnknownRoute",
+      "auth/routes/AuthRoute",
+      "file/routes/ImageRoutes",
+      "group/routes/GroupRoute",
+      "notification/routes/NotificationRoutes",
+      "post/routes/PostRoute",
+      "user/routes/UserRoutes"
+    ],
+    "helpers": [
+      "application/helpers/AppHelpers",
+      "auth/helpers/CanHelper"
+    ]
+  },
+  "types": [
+    "adapters",
+    "mixins",
+    "controllers",
+    "models",
+    "views",
+    "components",
+    "routes",
+    "helpers"
+  ]
+}

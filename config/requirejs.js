@@ -20,13 +20,14 @@ module.exports.requirejs = {
     // showdown for show markup
     'showdown': 'bower_components/showdown/src/showdown',
     // precompiled ember templates
-    emberTemplates: 'tpls.hbs',
+    emberTemplates: 'templates.hbs',
     // wejs files
     we: 'bower_components/we/dist/we',
     //we.js plugin integration
-    weEmberPlugin: 'js/ember/weEmberPlugin',
-    emberApp: 'js/ember/emberApp',
+    //weEmberPlugin: 'js/ember/weEmberPlugin',
+    //emberApp: 'js/ember/emberApp',
     // starter script
+    weCsCore: 'we-cs.js',
     starter: 'js/ember/starter',
     'ember-uploader': 'bower_components/ember-uploader/dist/ember-uploader',
     // wysiwyg editor

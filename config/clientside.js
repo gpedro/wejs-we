@@ -29,7 +29,7 @@ module.exports.clientside = {
   // we.js logs
   log: {
     events: false,
-    hooks: false
+    hooks: true
   }
 
 };
