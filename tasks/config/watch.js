@@ -14,15 +14,34 @@ module.exports = function(grunt) {
 
 	grunt.config.set('watch', {
 		assets: {
-
 			// Assets to watch:
-			files: ['assets/**/*'],
-
+			files: [
+				'assets/fonts/**/*',
+				'assets/imgs/**/*',
+				'assets/langs/**/*',
+				'assets/styles/**/*',
+				'assets/wysiwyg/**/*'
+			],
 			// When assets are changed:
 			tasks: [
-				'syncAssets' ,
-				'emberhandlebars:dev',
-	    	'we_sails_ember_tasks:dev'
+				'syncAssets'
+    	]
+		},
+		templates: {
+			files: [
+				'assets/js/**/*.hbs',
+			],
+			tasks: [
+				'emberhandlebars:dev'
+    	]
+		},
+		emberScripts: {
+			files: [
+				'assets/js/**/*.js',
+			],
+			tasks: [
+				'sync:devJs',
+				'we_sails_ember_tasks:dev'
     	]
 		}
 	});

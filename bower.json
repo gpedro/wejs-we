@@ -13,7 +13,7 @@
   "dependencies": {
     "bootstrap": "~3.0.3",
     "lodash": "~2.4.1",
-    "we": "~0.0.9",
+    "we": "~0.0.11",
     "ember-addons.bs_for_ember": "~0.6.1",
     "ember-auth": "~9.0.7",
     "ember-i18n": "~1.6.3",
@@ -29,7 +29,8 @@
     "summernote": "~0.5.1",
     "codemirror": "~4.2.0",
     "select2": "~3.5.0",
-    "Jcrop": "~0.9.12"
+    "Jcrop": "~0.9.12",
+    "font-awesome": "4.1.0"
   },
   "license": "MIT",
   "author": [
@@ -38,5 +39,8 @@
   "resolutions": {
     "ember": "~1.5.1",
     "jquery": "2.1.0"
+  },
+  "devDependencies": {
+    "nprogress": "~0.1.6"
   }
 }
