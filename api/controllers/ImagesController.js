@@ -115,7 +115,6 @@ module.exports = {
 
     req.file('images').upload(function (err, files) {
       if (err) return res.serverError(err);
-      sails.log.debug('salved files:', files);
       Images.uploadMultiple(files, creatorId, function(err, uploadedFiles){
         if(err){
           res.send(
@@ -128,7 +127,7 @@ module.exports = {
           Images.create(uploadedFiles).exec(function(error, salvedFiles) {
             if (err) return res.serverError(err);
 
-            sails.log.warn('salvedFiles',salvedFiles);
+            sails.log.warn('> salvedFiles',salvedFiles);
             res.send({
               images: salvedFiles
             });
@@ -190,8 +189,6 @@ module.exports = {
         sails.log.debug('resize image to:', cords);
 
         sails.log.debug('result:',size.width, size.width);
-
-
 
         // delete old auto generated image styles
         FileImageService.deleteImageStylesWithImageName(image.name, function(err){
