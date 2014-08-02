@@ -4,6 +4,7 @@ module.exports = function (grunt) {
 		'less:dev',
 		'copy:dev',
     'copy:theme_dev',
+		'imagemin:static',
     'weThemeEmberHandlebars:dev',
     'we_sails_ember_tasks:dev'
 	]);
