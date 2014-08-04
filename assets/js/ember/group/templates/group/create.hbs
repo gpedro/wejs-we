@@ -20,9 +20,23 @@
         {{view Ember.Select name="Privacity" value=group.privacity optionValuePath="content.value" optionLabelPath="content.label" content=privacityList classNames="form-control"}}
       </div>
     </div>
+    {{#if imageSelected}}
+        {{we-image-crop src=salvedImage.urls.original file=salvedImage data=cropImageData}}
+      {{else}}
+        <div class="form-group">
+          <div class="input-group">
+             <label for="image" class="input-group-addon">{{t 'Group image'}}</label>
+              {{image-upload multiple="false" files=files}}
+          </div>
+        </div>
+      {{/if}}
   </div>
   <div class="panel-footer">
-    <button type="submit" class="btn btn-primary">{{t 'Create'}}</button>
+    {{#if imageSelected}}
+      <button class="btn btn-primary" type="buttom" {{action 'cropAndSave'}}>Salvar grupo</button>
+    {{else}}
+      <button class="btn btn-primary" type="buttom" {{action 'selectFile'}}>Selecionar imagem</button>
+    {{/if}}
   </div>
 </div>
 </form>

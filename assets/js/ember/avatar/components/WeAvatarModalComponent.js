@@ -74,12 +74,13 @@ define(['we','ember'], function (we) {
           contentType: 'application/json'
         }).done(function(newImage){
           self.get('store').push('image', newImage.image);
+          //self.send('saveAvatar', salvarGrupo); com objeto da imagem 
           self.send('saveAvatar');
         }).fail(function(e){
           console.error('Error on image crop',e);
         });
       },
-
+      // createGroup
       saveAvatar: function(){
         var self = this;
         var image = this.get('salvedImage');
@@ -87,6 +88,7 @@ define(['we','ember'], function (we) {
 
         Ember.$.ajax({
           type: 'put',
+          // /api/v1/group/
           url: '/api/v1/user/'+userId+'/avatar',
           data: JSON.stringify({
             imageId: image.id

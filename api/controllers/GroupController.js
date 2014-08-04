@@ -74,7 +74,7 @@ module.exports = {
       if (err) return res.negotiate(err);
 
       res.status(201);
-      res.ok(newInstance.toJSON());
+      res.send({ group : newInstance });
     });
   }
 

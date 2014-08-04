@@ -32,6 +32,12 @@ define(['we','ember'], function (we) {
   App.GroupsCreateRoute = Ember.Route.extend(App.ResetScrollMixin,{
     renderTemplate: function() {
       this.render('group/create');
+    },
+    model: function() {
+      return {
+        image: {},
+        group: {},
+      };
     }
   });
 

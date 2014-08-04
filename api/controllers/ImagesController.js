@@ -80,15 +80,15 @@ module.exports = {
 
   findOneReturnData : function (req, res){
     var query = {};
-    var fileName = req.param('name');
-    if(!fileName){
+    var fileId = req.param('id');
+    if(!fileId){
       return res.send(404);
     }
     Images.findOne()
-    .where({name: fileName})
+    .where({id: fileId})
     .exec(function(err, image) {
       if (err) {
-        sails.log.error('Error on get image from BD: ',err, fileName);
+        sails.log.error('Error on get image from BD: ',err, fileId);
         return res.send(404);
       }
       if(!image){
