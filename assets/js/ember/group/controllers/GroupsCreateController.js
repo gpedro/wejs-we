@@ -85,7 +85,7 @@ define(['we','ember'], function (we) {
         var newGroup = this.store.createRecord('group',group);
         newGroup.save().then(function(g){
           _this.transitionToRoute('group',g.id);
-        });        
+        });
 
       },
       /*
