@@ -1,4 +1,4 @@
-#We.js
+# We.js
 
 > A framework for create Social Networks written with javascript - [Sails.js](http://sailsjs.org) Powered!.
 
@@ -6,8 +6,8 @@ We.js framework has the features:
 
  - [plugins](https://github.com/wejs?query=plugin)
  - [themes](https://github.com/wejs?query=theme)
- - generator ( with Yeoman ) | https://github.com/wejs/generator-wejs
- - modular clientside modules( by default with ember.js )
+ - generators ( with Yeoman ) | https://github.com/wejs/generator-wejs
+ - clientside modules( by default with ember.js )
  - grunt tasks
 
 ========
@@ -17,7 +17,6 @@ We.js framework has the features:
 
 ---------------
 
-**Status** - :construction: In development, dont use it for production :bangbang:
 
 **Have a question, found an error or wants to help?**
 
@@ -33,26 +32,7 @@ We.js framework has the features:
 
 ## Avaible plugins
 
-* User account - In work on- good part ready
-* Roles and Permissions - TODO
-* Mail system - In work - good part ready
-* Pubsub feature - TODO
-* Notifications - TODO
-* Groups - In work
-* Messenger - In work - Working but needs more love
-* :white_check_mark: Wysiwyg editor - With server side sanitization feature - [Done!](https://github.com/wejs/we-example)
-* Notifications - In work
-* Images - Upload and resize done needs page for manage images
-* Attach files on posts - TODO
-* Vídeos - TODO
-* Galleries - TODO
-* Task mangement - TODO
-* Events - TODO
-* Posts / share content - In work: login and see in: wejs.org
-* Activity - TODO
-* Authentication - In work with Oauth in project - [In work here](https://github.com/wejs/we-accounts-rest-server)
-* :white_check_mark: Subproject suport - [Done!](https://github.com/wejs/we-example)
-* :white_check_mark: Theme system - [Done!](https://github.com/wejs/we-theme-engine)
+Check: https://github.com/wejs?query=plugin
 
 ## Installation
 
