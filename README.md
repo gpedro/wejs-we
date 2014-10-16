@@ -1,8 +1,14 @@
 #We.js
 
-#### A npm module for create Social Networks written with javascript - [Sails.js](http://sailsjs.org) Powered!.
+> A framework for create Social Networks written with javascript - [Sails.js](http://sailsjs.org) Powered!.
 
-**We.js includes theme system, all server side features api, grunt configs and sails.js default configs**
+We.js framework has the features:
+
+ - [plugins](https://github.com/wejs?query=plugin)
+ - [themes](https://github.com/wejs?query=theme)
+ - generator ( with Yeoman ) | https://github.com/wejs/generator-wejs
+ - modular clientside modules( by default with ember.js )
+ - grunt tasks
 
 ========
 
@@ -25,7 +31,7 @@
 ***If want see or test a We.js live example access: http://wejs.org/*** :eyes:
 
 
-## FEATURES
+## Avaible plugins
 
 * User account - In work on- good part ready
 * Roles and Permissions - TODO
